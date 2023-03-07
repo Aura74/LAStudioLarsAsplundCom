@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lars Att Göra-Lista</title>           <!-- Min titel som syns i fliken  fil-->
+    <link rel="stylesheet" href="./style.css" /> <!-- Min style css  fil-->
+  <!-- Ikoner från fontawesome med mitt personliga kit-nummer-->
+  <script src="https://kit.fontawesome.com/4ff51b4cc4.js" crossorigin="anonymous"></script>
+  <!-- Några coola fonter från googlefonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Eater&family=Faster+One&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- header tror jag tillkom i html5 för att läsarna ska veta att här är huvudet med ex h1 -->
+  <header> <!-- Rubrik h1 -->
+        <h1>Lars Att Göra-Lista</h1>
+  </header>
+  
+  <form><!-- Formuläret form används som en container för olika typer av input-elemet-->
+    <!-- En input av typen text, här ska jag skriva i mitt -attgöra, ger den class-namnet todo-input -->
+    <input type="text" class="todo-input" />
+    <!-- En knapp som när allt är klart kommer att exetuera en funktion som gör att det jag skrev i input hamnar i en lista-->
+    <button class="todo-button" type="submit">
+      <!-- här är ikonen från fontawesome ett plus -->
+      <i class="fas fa-plus-square"></i>
+    </button>
+  </form>
+
+  <div class="todo-container">
+    <ul class="todo-list">
+      <!-- Här är platsen där alla todos:s kommer att hamna, alla li och div kommer att skapas av JS 
+    så ingen html-kod här,  en div med class-namnet  todo, flera li och knappar för delete och avklarat   -->
+    </ul>
+  </div>
+<!-- Här är min externa JS-fil, den ligger i roten, i samma mapp som alla andra filerna i detta projekt -->
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {/* Tar bort gammalt: */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-image: url("sea1.jpg"); /* min bild på månen som liger i samma mapp som alla andra filer */ 
+    color: rgb(199, 107, 32); /* färgen på texten */
+    min-height: 100vh; /* minsta höjd på bodyn*/
+    background-repeat: no-repeat, repeat; /* bara en bild */
+    background-size: cover; /* bilden ska täcka hela skärmen */
+}
+header {
+  font-size: 2rem; /* ganska stor storlek på rubriken */
+    font-family: 'Caesar Dressing', cursive; /* min google font som ser ut som vikingatext */
+}
+header,
+form {
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;/* storleken på paddingen  */
+  font-size: 2rem;/* större text */
+  border: none;/* border */
+  background: white;/* bakgrunden ska vara vit */
+}
+form button {
+  color: #000000; /* färg på knapp*/
+  background: white; /*  vit bakgrund */
+  cursor: pointer; /*  gör om musepekaren till en pointer */
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #13ff3b; /*  grön bakgrund */
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;/*  centrerar */
+  align-items: center;/*  centrerar */
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;/*  tar bort punkterna */
+}
+.todo {
+  margin: 0.5rem; /*  lite marginal */
+  background: white; /*  vit bakgrund */
+  font-size: 2rem; /*  lite större text än standard */
+  color: black; /*  svart text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease; /*  1 sekund räcker */
+}
+.todo li {
+  flex: 1; /*  gör så att knapparna hamnar längst till höger */
+}
+.complete-btn {
+  background:  rgb(16, 168, 16); /*  grön bakgrund */
+  color: white; /*  vit text */
+  border: none; /*  ingen border */
+  padding: 1rem; /*  padding */
+  cursor: pointer; /*  byter ut muspekaren */
+}
+.trash-btn {
+  background:  rgb(194, 21, 21); /*  röd bakgrund */
+  color: white; /*  vit text */
+  border: none; /*  ingen border */
+  padding: 1rem; /*  padding */
+  cursor: pointer; /*  byter ut muspekaren */
+  font-size: 1rem; /*  fontstorleken */
+}
+.complete-btn:hover{ /*  när man hovrar över knappen */
+    background: #13ff3b; /*  grön bakgrund */
+    color: white; /*  färgen på ikonen och ev text */
+}
+.trash-btn:hover{ /*  när man hovrar över knappen */
+    background: #f51010; /*  röd bakgrund */
+    color: white; /*  färgen på ikonen och ev text */
+}
+.complete-btn { /*  Knappen - klar */
+  background: rgb(11, 212, 162); /*  Knappen - klars bakgrundsfärg */
+}
+.todo-item {
+  padding: 0rem 0.5rem; /*  lite padding så att rutorna inte sitter helt ihop */
+}
+.fa-trash,
+.fa-check { /*  Ikonerna för knapparna */
+  pointer-events: none; /*  gör att man inte kan klicka på denna ikon något mer */
+}
+.fall { /*  Transformationen på ta-bort */
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+.completed {
+  text-decoration: line-through; /*  drar en linje rakt igenom texten*/
+  opacity: 0.5;
+}
