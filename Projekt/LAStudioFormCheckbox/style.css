@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.toggle {
+  opacity: 0;
+}
+
+.toggle + label {
+  position: relative;
+  padding-left: 5rem;
+  font-size: 1.3rem;
+}
+.toggle + label::before {
+  content: "";
+  background-color: #d82323;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 4.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  transition: background-color 0.2s;
+}
+
+.toggle + label::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgb(202, 236, 50);
+  position: absolute;
+  top: -0.35rem;
+  left: 0.25rem;
+  transition: transform 0.2s;
+}
+
+.toggle:checked + label::before {
+  background-color: #20b776;
+}
+
+.toggle:checked + label::after {
+  transform: translateX(2rem);
+}
