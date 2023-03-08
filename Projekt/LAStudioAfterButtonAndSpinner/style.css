@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: black;
+}
+.GiljotinKnapp {
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border: 4px solid #ffc500;
+  color: #ffc500;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.GiljotinKnapp::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffc500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.GiljotinKnapp:hover {
+  color: black;
+}
+
+.GiljotinKnapp:hover::before {
+  transform: translateX(0);
+}
+
+.spinner {
+  width: 300px;
+  height: 300px;
+  background: conic-gradient(cyan, yellow, magenta, cyan);
+  border-radius: 50%;
+  margin: 100px;
+  border: 4px solid white;
+  box-shadow: inset 0px opx 110px -70px white;
+  position: relative;
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner::after {
+  content: "";
+  background-color: black;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid white;
+  box-shadow: inset 0px 0px 110px -70px white;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
